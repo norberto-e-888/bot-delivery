@@ -1,0 +1,24 @@
+{
+  "name": "services-navigation",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "services/navigation/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "services-navigation:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "services-navigation:build:development"
+        },
+        "production": {
+          "buildTarget": "services-navigation:build:production"
+        }
+      }
+    }
+  }
+}
